@@ -21,7 +21,14 @@ body{
 }
 
 .title{
-    
+  font-weight: bold;
+  color: darkblue;
+  text-shadow:
+    -2px -2px 0 white,
+    2px -2px 0 white,
+    -2px 2px 0 white,
+    2px 2px 0 white;
+
 }
 
 #games {
