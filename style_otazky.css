@@ -77,5 +77,11 @@ body {
     background-color: #441c1c;
     border: 2px solid black;
     border-radius: 8px;
+    
+  }
+
+  a{
+    color: white;
+    text-decoration:none ;
   }
   
