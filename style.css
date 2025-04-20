@@ -83,5 +83,33 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.naspat {
+  margin-top: 30px;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: #3f51b5;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect */
+.naspat:hover {
+  background-color: #303f9f;
+  transform: scale(1.05);
+}
+
+/* Optional: focus outline for accessibility */
+.naspat:focus {
+  outline: 3px solid #c5cae9;
+  outline-offset: 2px;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
 
 /*tento komentik je iba pre samuska */
