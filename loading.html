@@ -11,8 +11,20 @@
     <h2>Tím 1</h2>
     <input id="teamOne" type="text" placeholder="Napr degeškovci" />
     <h2>Tím 2</h2>
-    <input id="teanTwo" type="text" placeholder="Napr rontogéni" />
-    <button id="ready"><a href="index.html">Sme pripraveny!!</a></button>
+    <input id="teamTwo" type="text" placeholder="Napr rontogéni" />
+    <button id="ready"><a href="index.html">Sme pripraveni!!</a></button>
   </body>
-  <script src="script.js"></script>
+  <script>
+    //NAZVY TIMOV NA LOADING SCREEN -- ulozenie do local storage
+    document.getElementById("ready").addEventListener("click", () => {
+      localStorage.setItem(
+        "teamOneName",
+        document.getElementById("teamOne").value
+      );
+      localStorage.setItem(
+        "teamTwoName",
+        document.getElementById("teamTwo").value
+      );
+    });
+  </script>
 </html>
