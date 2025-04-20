@@ -1,0 +1,68 @@
+/* Center everything on the page */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+}
+
+/* Headings styling */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h2 {
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+/* Input field styling */
+input[type="text"] {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 250px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus effect */
+input[type="text"]:focus {
+    border-color: #3f51b5;
+    box-shadow: 0 0 5px rgba(63, 81, 181, 0.5);
+    outline: none;
+}
+button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: #3f51b5;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #303f9f;
+    transform: scale(1.05);
+}
+
+/* Optional: focus outline for accessibility */
+button:focus {
+    outline: 3px solid #c5cae9;
+    outline-offset: 2px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}

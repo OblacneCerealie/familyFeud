@@ -1,11 +1,87 @@
-body{
-    background-image: url('./FF_moznosti.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-html, body {
-    height: 100%;
+body {
+    background: radial-gradient(circle, #892f2f 0%, #441c1c 100%);
+    display: flex;
+    flex-direction: column; /* <-- This makes children stack vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
+    font-family: sans-serif;
   }
+  
+  .board {
+    background: black;
+    padding: 30px;
+    border: 8px solid #c9c851;
+    border-radius: 12px;
+    outline: 6px solid #4535b1;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  
+  .flip-card {
+    perspective: 1500px;
+    margin: 0 15px;
+  }
+  
+  .flip-inner {
+    position: relative;
+    width: 280px;
+    height: 80px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .box {
+    width: 280px;
+    height: 80px;
+    border: 4px solid white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 28px;
+    cursor: pointer;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+  }
+  
+  .front {
+    background: linear-gradient(to bottom, #3399ff, #003366);
+    color: white;
+    z-index: 2;
+  }
+  
+  .back {
+    background: #ffee00;
+    color: black;
+    transform: rotateY(180deg);
+    z-index: 1;
+  }
+  .XX {
+    margin-top: 100px;
+    font-size: 32px;
+    color: red;
+    background-color: #441c1c;
+    border: 2px solid black;
+    border-radius: 8px;
+    
+  }
+
+  a{
+    color: white;
+    text-decoration:none ;
+  }
+  
