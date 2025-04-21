@@ -14,12 +14,20 @@
       <h3>
         <a class="game-link" , href="./otazka1.html"> Game number one!</a>
       </h3>
+      <!-- ak chces otazky dalsie davaj ich tu prosim ta, nie dalsi div iba h3, <a>  a atd-->
     </div>
     <button class="naspat"><a href="loading.html">Chceme zmeniť tímy!!</a></button>
-    <body>
+
       <div class="scoreboard left">Team A: 0</div>
       <div class="scoreboard right">Team B: 0</div>
-    </body>
+      <script>
+        window.addEventListener('DOMContentLoaded', () => {
+          const header = document.querySelector('.header');
+          const games = document.getElementById('games');
+          const headerHeight = header.offsetHeight;
+          games.style.paddingTop = `${headerHeight - 40}px`; // +30 for spacing
+        });
+      </script>
   </body>
   <script src="scriptIndex.js"></script>
 </html>
