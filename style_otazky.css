@@ -7,6 +7,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: sans-serif;
+    position: relative;
   }
   
   .board {
@@ -85,3 +86,57 @@ body {
     text-decoration:none ;
   }
   
+.scoreboard {
+  position: fixed;
+  bottom: 0;
+  width: 200px;
+  padding: 10px;
+  color: white;
+  background: #333;
+  text-align: center;
+  font-size: 1.2rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+  
+
+.point-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 20px;
+  gap: 20px;
+  
+}
+
+.point-box {
+  background-color: #222;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.point-btn {
+  background-color: #007bff;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.point-btn:hover {
+  background-color: #0056b3;
+}
