@@ -12,7 +12,9 @@
     </div>
     <div id="games">
       <h3>
-        <a class="game-link" , href="./otazka1.html"> Game number one!</a>
+        <a class="game-link" id="game1" , href="./otazka1.html">
+          Game number one!</a
+        >
       </h3>
       <!-- ak chces otazky dalsie davaj ich tu prosim ta, nie dalsi div iba h3, <a>  a atd-->
     </div>
@@ -21,16 +23,16 @@
         <a href="loading.html">Chceme zmeniť tímy!!</a>
       </button>
     </div>
-      <div class="scoreboard left">Team A: 0</div>
-      <div class="scoreboard right">Team B: 0</div>
-      <script>
-        window.addEventListener('DOMContentLoaded', () => {
-          const header = document.querySelector('.header');
-          const games = document.getElementById('games');
-          const headerHeight = header.offsetHeight;
-          games.style.paddingTop = `${headerHeight - 40}px`; // nemam sajnu najmensiu preco to musim davat minus ale kym to funguje id...
-        });
-      </script>
+    <div class="scoreboard left" id="scoreATeam">Team A: 0</div>
+    <div class="scoreboard right" id="scoreBTeam">Team B: 0</div>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const header = document.querySelector(".header");
+        const games = document.getElementById("games");
+        const headerHeight = header.offsetHeight;
+        games.style.paddingTop = `${headerHeight - 40}px`; // nemam sajnu najmensiu preco to musim davat minus ale kym to funguje id...
+      });
+    </script>
   </body>
   <script src="scriptIndex.js"></script>
 </html>

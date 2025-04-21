@@ -70,46 +70,14 @@
       <button id="btn-right" class="point-btn">+</button>
     </div>
     <div class="X">
-      <button class="XX">X</button>
+      <button class="XX" id="wrong">X</button>
     </div>
     <div class="X">
       <button class="XX" id="back"><a href="index.html">Gou bek!!</a></button>
     </div>
-      <div id="team-a" class="scoreboard left">Team A: 0</div>
-      <div id="team-b" class="scoreboard right">Team B: 0</div>
-      <script>
-        let tempPoints = 0;
-        let scoreA = 0;
-        let scoreB = 0;
-      
-        const pointBox = document.getElementById("point-box");
-        const teamA = document.getElementById("team-a");
-        const teamB = document.getElementById("team-b");
-      
-        document.getElementById("btn-left").addEventListener("click", () => {
-          scoreA += tempPoints;
-          teamA.textContent = `Team A: ${scoreA}`;
-          tempPoints = 0;
-          updatePointBox();
-        });
-      
-        document.getElementById("btn-right").addEventListener("click", () => {
-          scoreB += tempPoints;
-          teamB.textContent = `Team B: ${scoreB}`;
-          tempPoints = 0;
-          updatePointBox();
-        });
-      //tu je ten optional co mozes vymazat alebo nechame tak//
-        pointBox.addEventListener("click", () => {
-          tempPoints += 1;
-          updatePointBox();
-        });
-      
-        function updatePointBox() {
-          pointBox.textContent = `Points: ${tempPoints}`;
-        }
-      </script>
-      
+    <div id="team-a" class="scoreboard left">A error</div>
+    <div id="team-b" class="scoreboard right">B error</div>
+    <audio id="ahoj" src="sounds/question.mp3"></audio>
     <script src="./script.js"></script>
   </body>
 </html>

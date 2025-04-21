@@ -18,13 +18,15 @@
     //NAZVY TIMOV NA LOADING SCREEN -- ulozenie do local storage
     document.getElementById("ready").addEventListener("click", () => {
       localStorage.setItem(
-        "teamOneName",
+        "teamAName",
         document.getElementById("teamOne").value
       );
       localStorage.setItem(
-        "teamTwoName",
+        "teamBName",
         document.getElementById("teamTwo").value
       );
+      localStorage.setItem("teamAScore", 0);
+      localStorage.setItem("teamBScore", 0);
     });
   </script>
 </html>
