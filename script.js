@@ -8,26 +8,25 @@ const answers = [
   "Riboza",
 ];
 window.addEventListener("DOMContentLoaded", () => {
-  const questionSound = document.getElementById("ahoj");
-  questionSound.play();
+  document.getElementById("ahoj").play();
 });
 
-document.querySelectorAll(".flip-card").forEach((card, index) => {
+document.querySelectorAll(".flip-card").forEach((currElement, index) => {
+  const button = currElement.querySelector(".front");
+  const back = currElement.querySelector(".back");
   if (answers[index]) {
-    const button = card.querySelector(".front");
-    const back = card.querySelector(".back");
-
     button.addEventListener("click", () => {
-      if (!card.classList.contains("flipped")) {
+      if (!currElement.classList.contains("flipped")) {
         // playing the audio
-        const correctSoudnd = new Audio("sounds/prompt_with_correct.mp3");
-        correctSoudnd.play();
+        new Audio("sounds/prompt_with_correct.mp3").play();
 
         const answer = answers[index] || "ERROR ERROR ERRROR KURVA";
         back.textContent = answer;
-        card.classList.add("flipped");
+        currElement.classList.add("flipped");
       }
     });
+  } else {
+    button.classList.add("hidden");
   }
 });
 
