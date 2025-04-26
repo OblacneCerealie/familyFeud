@@ -12,3 +12,10 @@ scoreTeamAIndex.textContent = `${localStorage.getItem("teamAName")} : ${
 scoreTeamBIndex.textContent = `${localStorage.getItem("teamBName")} : ${
   scoreB || 0
 }`;
+
+// storovanie udaju o tom, aku hru klikol user
+for (let i = 1; i < 11; i++) {
+  document.getElementById(`game${i}`).addEventListener("click", () => {
+    localStorage.setItem(`currentGame`, i);
+  });
+}

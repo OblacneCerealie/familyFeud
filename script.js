@@ -1,14 +1,79 @@
-const answers = [
-  "Glukoza",
-  "Fruktoza",
-  "Sachroza",
-  "Skrob",
-  "Glykogen",
-  "Manoza",
-  "Riboza",
-];
+const currGame = parseInt(localStorage.getItem("currentGame"));
+let answers;
+if (currGame === 1) {
+  answers = [
+    "Glucose",
+    "Fructose",
+    "Sucrose",
+    "Starch",
+    "Glycogen",
+    "Mannose",
+    "Ribose",
+  ];
+} else if (currGame === 2) {
+  answers = [
+    "Source of energy",
+    "Storing energy",
+    "Structural function",
+    "Immune function",
+  ];
+} else if (currGame === 3) {
+  answers = [
+    "Honey",
+    "Fruit",
+    "Potatoes",
+    "Bread/Pastry",
+    "Rise",
+    "Rolled oats",
+    "Chocolade",
+  ];
+} else if (currGame === 4) {
+  answers = ["Sweetener", "Beer production", "Perservative", "Lactose in milk"];
+} else if (currGame === 5) {
+  answers = ["Fruits", "Pastry", "Chocolade", "Potatoes", "Candy"];
+} else if (currGame === 6) {
+  answers = [
+    "Subcutaneous fatty tissue",
+    "Liver",
+    "Muscles",
+    "Your belly", // WTF uvidime ci toto este
+  ];
+} else if (currGame === 7) {
+  answers = [
+    "Cell wall of plants",
+    "Vegetables",
+    "Paper",
+    "Textile",
+    "Cotton wool",
+  ];
+} else if (currGame === 8) {
+  answers = [
+    "Diabetes",
+    "Obesity",
+    "Lactose intolerance",
+    "Tooth decay",
+    "Overeating",
+  ];
+} else if (currGame === 9) {
+  answers = [
+    "Solubility",
+    "Solidness",
+    "Optical activity",
+    "Fragility",
+    "Colourless",
+    "Crystalline",
+    "Sweet taste",
+  ];
+} else if (currGame === 10) {
+  answers = ["Gluconic acid", "Glucuronic acid", "Glucitol", "Glucaric acid"];
+} else {
+  throw new Error("Nieco sa posralo");
+}
+
+// TOTO NEFUNGUJE A HADZE TO ERRORY DO KONZOLY ALE NEMAM TERAZ MENTALNU KAPACITU NA TO ABY SO TO RIESIL
 window.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("ahoj").play();
+  const soundPlay = document.getElementById("ahoj");
+  soundPlay.play();
 });
 
 document.querySelectorAll(".flip-card").forEach((currElement, index) => {
@@ -90,7 +155,7 @@ document.getElementById("back").addEventListener("click", () => {
   localStorage.setItem("teamBScore", scoreB);
 });
 
-// Wrong answer
+// Wrong answer -- Treba este nejaky counter ci co !!!
 const wrongSound = new Audio("sounds/sounds_wrong.mp3");
 wrongBtn.addEventListener("click", () => {
   wrongCounter += 1;
