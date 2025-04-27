@@ -25,12 +25,20 @@ if (currGame === 1) {
     "Bread/Pastry",
     "Rise",
     "Rolled oats",
-    "Chocolade",
+    "Chocolate",
   ];
 } else if (currGame === 4) {
   answers = ["Sweetener", "Beer production", "Perservative", "Lactose in milk"];
 } else if (currGame === 5) {
-  answers = ["Fruits", "Pastry", "Chocolade", "Potatoes", "Candy"];
+  answers = [
+    "Pastry - white bread",
+    "Watermelon",
+    "Potatoes",
+    "White rice",
+    "Cornflakes",
+    "Candy",
+    "Soft drinks",
+  ];
 } else if (currGame === 6) {
   answers = [
     "Subcutaneous fatty tissue",
@@ -98,14 +106,13 @@ document.querySelectorAll(".flip-card").forEach((currElement, index) => {
 // Scoring System
 const scoring = new Map();
 scoring
-  .set(1, 800)
-  .set(2, 700)
-  .set(3, 600)
-  .set(4, 500)
-  .set(5, 400)
-  .set(6, 300)
-  .set(7, 200)
-  .set(8, 100);
+  .set(1, 700)
+  .set(2, 600)
+  .set(3, 500)
+  .set(4, 400)
+  .set(5, 300)
+  .set(6, 200)
+  .set(7, 100);
 
 let tempPoints = 0;
 let scoreA = parseInt(localStorage.getItem("teamAScore")) || 0;
@@ -125,7 +132,7 @@ teamA.textContent = `${localStorage.getItem("teamAName")} : ${scoreA}`;
 teamB.textContent = `${localStorage.getItem("teamBName")} : ${scoreB}`;
 
 // Selectovanie elementov na otazkach a pripocitavanie bodov timom za otazky
-for (let x = 1; x < 9; x++) {
+for (let x = 1; x < 8; x++) {
   const odpovedBtn = document.getElementById(String(x));
   if (odpovedBtn) {
     odpovedBtn.addEventListener("click", function () {
