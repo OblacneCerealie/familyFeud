@@ -146,10 +146,20 @@ a {
 
 #xtext {
   color: red;
-  font-size: 30px;
+  /*font-size: 30px;*/
   visibility: visible;
+  transition: all 0.5s ease;
+  z-index: 1; 
 }
 
-h3 {
+h2 {
   margin: 0px;
+  font-size: 40px;
+}
+
+
+.fullscreen {
+
+  font-size: 8rem;
+  z-index: 9999;
 }

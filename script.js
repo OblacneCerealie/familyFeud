@@ -79,10 +79,10 @@ if (currGame === 1) {
 }
 
 // TOTO NEFUNGUJE A HADZE TO ERRORY DO KONZOLY ALE NEMAM TERAZ MENTALNU KAPACITU NA TO ABY SO TO RIESIL
-window.addEventListener("DOMContentLoaded", () => {
-  const soundPlay = document.getElementById("ahoj");
-  soundPlay.play();
-});
+//window.addEventListener("DOMContentLoaded", () => {
+  //const soundPlay = document.getElementById("ahoj");
+  //soundPlay.play();
+//});
 
 document.querySelectorAll(".flip-card").forEach((currElement, index) => {
   const button = currElement.querySelector(".front");
@@ -119,6 +119,7 @@ let scoreA = parseInt(localStorage.getItem("teamAScore")) || 0;
 let scoreB = parseInt(localStorage.getItem("teamBScore")) || 0;
 let wrongCounter = 0;
 
+const Xka = document.getElementById("xtext");
 const wrongBtn = document.getElementById("wrong");
 const pointBox = document.getElementById("point-box");
 const teamA = document.getElementById("team-a");
@@ -169,8 +170,13 @@ if (wrongCounter === 0) {
   document.getElementById("xtext").innerHTML = "-";
   document.getElementById("xtext").style.visibility = "hidden";
 }
+
 wrongBtn.addEventListener("click", () => {
   document.getElementById("xtext").style.visibility = "visible";
+  Xka.classList.add('fullscreen');
+  setTimeout(() => {
+    Xka.classList.remove('fullscreen');
+  }, 1000);
   wrongCounter += 1;
   wrongSound.play();
   if (wrongCounter === 1) {
