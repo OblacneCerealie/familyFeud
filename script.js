@@ -163,8 +163,22 @@ document.getElementById("back").addEventListener("click", () => {
 });
 
 // Wrong answer -- Treba este nejaky counter ci co !!!
+
 const wrongSound = new Audio("sounds/sounds_wrong.mp3");
+if (wrongCounter === 0) {
+  document.getElementById("xtext").innerHTML = "-";
+  document.getElementById("xtext").style.visibility = "hidden";
+}
 wrongBtn.addEventListener("click", () => {
+  document.getElementById("xtext").style.visibility = "visible";
   wrongCounter += 1;
   wrongSound.play();
+  if (wrongCounter === 1) {
+    document.getElementById("xtext").innerHTML = "X";
+  } else if (wrongCounter === 2) {
+    document.getElementById("xtext").innerHTML = "XX";
+  } else if (wrongCounter === 3) {
+    document.getElementById("xtext").innerHTML = "XXX";
+    wrongCounter = 0;
+  }
 });

@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="board">
-      <div class="row">
+      <div class="column">
         <div class="flip-card">
           <div class="flip-inner">
             <button class="box front" id="1">1</button>
@@ -16,15 +16,28 @@
         </div>
         <div class="flip-card">
           <div class="flip-inner">
-            <button class="box front" id="5">5</button>
+            <button class="box front" id="2">2</button>
+            <div class="box back"></div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-inner">
+            <button class="box front" id="3">3</button>
+            <div class="box back"></div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-inner">
+            <button class="box front" id="4">4</button>
             <div class="box back"></div>
           </div>
         </div>
       </div>
-      <div class="row">
+
+      <div class="column">
         <div class="flip-card">
           <div class="flip-inner">
-            <button class="box front" id="2">2</button>
+            <button class="box front" id="5">5</button>
             <div class="box back"></div>
           </div>
         </div>
@@ -34,25 +47,9 @@
             <div class="box back"></div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="flip-card">
-          <div class="flip-inner">
-            <button class="box front" id="3">3</button>
-            <div class="box back"></div>
-          </div>
-        </div>
         <div class="flip-card">
           <div class="flip-inner">
             <button class="box front" id="7">7</button>
-            <div class="box back"></div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="flip-card">
-          <div class="flip-inner">
-            <button class="box front" id="4">4</button>
             <div class="box back"></div>
           </div>
         </div>
@@ -69,6 +66,7 @@
       <div id="point-box" class="point-box">Points: 0</div>
       <button id="btn-right" class="point-btn">+</button>
     </div>
+    <div><h3 id="xtext"></h3></div>
     <div class="X">
       <button class="XX" id="wrong">X</button>
     </div>
